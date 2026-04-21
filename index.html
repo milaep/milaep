@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Links</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #7AB1D3;
+  --dark: #000000;
+  --gray: #383A36;
+  --card: rgba(255,255,255,0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #383A36, #000000);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* PROFILE */
+.profile img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+
+  box-shadow: 0 0 15px rgba(122,177,211,0.6);
+  transition: 0.3s;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(122,177,211,0.8),
+    0 0 40px rgba(122,177,211,0.4);
+}
+
+.pfp-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.pfp-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* GLOW RING */
+.pfp-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #7AB1D3,
+    transparent,
+    #7AB1D3
+  );
+
+  animation: rotateGlow 6s linear infinite;
+  z-index: 1;
+}
+
+/* blur biar keliatan glow */
+.pfp-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: #7AB1D3;
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* ANIMASI */
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile h2 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.social-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.social-logo:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #7AB1D3);
+}
+
+/* TEXT */
+.thank {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* BUTTON */
+.link {
+  background: var(--card);
+  border: 1px solid rgba(122,177,211,0.3);
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: rgba(122,177,211,0.12);
+  border-color: #7AB1D3;
+
+  box-shadow:
+    0 0 10px rgba(122,177,211,0.4),
+    0 0 20px rgba(122,177,211,0.2);
+}
+
+.link-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* About me */
+
+.about {
+  margin-top: 35px; /* ⬅️ ini yang ngasih jarak dari link */
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 45px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.footer span {
+  color: var(--primary);
+}
+</style>
+
+<!-- ICON -->
+<script src="https://kit.fontawesome.com/a2e0e6ad5b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <div class="pfp-wrapper">
+  <img src="Images/pfp2.png">
+</div>
+    <h2>Milaep</h2>
+    <div class="location">📍 Bandung, Indonesia</div>
+  </div>
+
+  <!-- SOCIAL -->
+<div class="socials">
+
+  <a href="https://www.instagram.com/m1l.aep" target="_blank">
+    <img src="Images/Instagram.webp" class="social-logo">
+  </a>
+
+  <a href="http://discordapp.com/users/606110826494951425" target="_blank">
+    <img src="Images/Discord.webp" class="social-logo">
+  </a>
+
+  <a href="https://steamcommunity.com/profiles/76561198118001938/" target="_blank">
+    <img src="images/Steam.png" class="social-logo">
+  </a>
+
+</div>
+
+  <div class="thank">Thank you for your support!</div>
+
+<a href="https://t.me/milaepcommunity" target="_blank" class="link">
+  Telegram channel
+</a>
+<a href="https://www.payhip.com/milaep" target="_blank" class="link">
+  Payhip (presets)
+</a>
+<a href="https://discord.gg/krnkPWnsBB" target="_blank" class="link">
+  Hana discord
+</a>
+<a href="https://discord.gg/ZszZEkXdnT" target="_blank" class="link">
+  Haru discord
+</a>
+<a href="https://paypal.me/muhammadzaidankamil" target="_blank" class="link">
+  Donate
+</a>
+
+  <div class="about">
+  <h3>About Me</h3>
+  <p>
+    Hello my name is <strong>Mil</strong> — I make football edits.
+    I share free football comps on my telegram channel to help other editors grow 😁
+  </p>
+</div>
+
+  <div class="footer">
+    Powered by <span>You :3 </span>
+  </div>
+
+</div>
+
+</body>
+</html>
+
