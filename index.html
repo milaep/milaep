@@ -48,8 +48,11 @@ body {
   transition: 0.3s;
 }
 
-.pfp-wrapper:hover img {
+.profile img:hover {
   transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(122,177,211,0.8),
+    0 0 40px rgba(122,177,211,0.4);
 }
 
 .pfp-wrapper {
@@ -64,9 +67,8 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  z-index: 2;
   position: relative;
-  transition: 0.3s;
+  z-index: 2;
 }
 
 /* GLOW RING */
@@ -186,9 +188,27 @@ body {
   margin-top: 35px;
 }
 
+/* Contact */
+
+.contact {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.contact a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
 /* FOOTER */
 .footer {
-  margin-top: 45px;
+  margin-top: 25px;
   font-size: 0.8rem;
   color: #888;
 }
@@ -212,7 +232,7 @@ body {
   <img src="Images/pfp2.png">
 </div>
     <h2>Milaep</h2>
-    <div class="location">Bandung, Indonesia</div>
+    <div class="location">📍 Bandung, Indonesia</div>
   </div>
 
   <!-- SOCIAL -->
@@ -227,7 +247,7 @@ body {
   </a>
 
   <a href="https://steamcommunity.com/profiles/76561198118001938/" target="_blank">
-    <img src="Images/Steam.png" class="social-logo">
+    <img src="images/Steam.png" class="social-logo">
   </a>
 
 </div>
@@ -256,6 +276,11 @@ body {
     Hello my name is <strong>Mil</strong> — I make football edits.
     I share free football comps on my telegram channel to help other editors grow 😁
   </p>
+</div>
+
+<div class="contact">
+  Contact: 
+  <a href="mailto:milaep21@gmail.com">milaep21@gmail.com</a>
 </div>
 
   <div class="footer">
